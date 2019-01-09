@@ -1,16 +1,15 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const css = require('cssnano');
+const rename = require('gulp-rename');
 
-gulp.task('watch', ['browserSync'], function() {
-  gulp.watch('project/css/**/*.css', browserSync.reload);
-  gulp.watch('project/*.html', browserSync.reload);
-  gulp.watch('project/js/**/*.js', browserSync.reload);
-})
+function cssMin(done) {
+  return src('project/**/*.css')
+      .pipe(css())
+      .pipe(rename({extname: '.min.css'}))
+      .pipe(dest('dist'))
+  done();
+}
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-        baseDir: 'project'
-    },
-  })
-});
+var watcher = watch('project/**/*.css', cssMin);
+
+exports.watch = watcher;
