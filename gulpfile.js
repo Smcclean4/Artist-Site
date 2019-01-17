@@ -14,7 +14,10 @@ function browser_sync(done) {
   });
   done();
 }
-
-function watch_file(done) {
-  
-}
+// work in progress
+gulp.task('watch', gulp.series(browser_sync, function() {
+  gulp.watch('project/**/*.css', browserSync.reload());
+  gulp.watch('project/*.html', browserSync.reload());
+  gulp.watch('project/**/*.js', browserSync.reload());
+}));
+// tomorrow figure out how to keep it watching files and syncing with browser
