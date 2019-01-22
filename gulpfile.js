@@ -14,10 +14,31 @@ function browser_sync(done) {
   });
   done();
 }
-// work in progress
-gulp.task('watch', gulp.series(browser_sync, function() {
-  gulp.watch('project/**/*.css', browserSync.reload());
-  gulp.watch('project/*.html', browserSync.reload());
-  gulp.watch('project/**/*.js', browserSync.reload());
-}));
-// tomorrow figure out how to keep it watching files and syncing with browser
+
+function watch_files(done) {
+  gulp.watch('project/css/**/*.css', reload);
+  gulp.watch('project/*.html', reload);
+  gulp.watch('project/js/**/*.js', reload);
+  done();
+}
+
+function reload(done) {
+  browserSync.reload();
+  done();
+}
+// working on building js, css and image minifications
+function css() {
+  return gulp
+    .src('project/css/**/*.css')
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist'))
+}
+
+function eff(done) {
+  return gulp.src('project/*.html')
+    .pipe(useref())
+    .pipe(gulp.dest('dist'))
+}
+
+gulp.task('useref', gulp.series(eff));
+gulp.task('watch', gulp.series(browser_sync, watch_files));
