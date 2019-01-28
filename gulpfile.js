@@ -5,6 +5,8 @@ const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const rename = require('gulp')
 const gulpIf = require('gulp-if');
+const useref = require('gulp-useref');
+const del = require('del');
 
 function browser_sync(done) {
   browserSync.init( {
@@ -26,19 +28,22 @@ function reload(done) {
   browserSync.reload();
   done();
 }
-// working on building js, css and image minifications
-function css() {
-  return gulp
-    .src('project/css/**/*.css')
-    .pipe(cssnano())
-    .pipe(gulp.dest('dist'))
-}
+// working on building js, css and image minifications ** add clean before
+// building minifications ...
 
 function eff(done) {
-  return gulp.src('project/*.html')
-    .pipe(useref())
-    .pipe(gulp.dest('dist'))
+  gulp.src('project/*.html')
+  .pipe(useref())
+  .pipe(gulpIf('*.js', uglify()))
+  .pipe(gulpIf('*.css', cssnano()))
+  .pipe(gulp.dest('dist'))
+  done();
 }
 
-gulp.task('useref', gulp.series(eff));
+function clean(done) {
+  del(['project/dist/*']);
+  done();
+}
+
+gulp.task('useref', gulp.series(clean, eff));
 gulp.task('watch', gulp.series(browser_sync, watch_files));
