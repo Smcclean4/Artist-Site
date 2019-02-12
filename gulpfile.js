@@ -39,10 +39,7 @@ function clean() {
 function mini() {
   return  gulp.src('project/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
-    .pipe(browserSync.stream());
 }
 
 gulp.task('useref', gulp.series(clean, mini));
