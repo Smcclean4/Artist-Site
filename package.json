@@ -27,7 +27,8 @@
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1",
-    "gulp-useref": "^3.1.6"
+    "gulp-useref": "^3.1.6",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {}
 }

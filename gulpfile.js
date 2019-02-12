@@ -32,14 +32,18 @@ function reload(done) {
 // working on building js, css and image minifications ** add clean before
 // building minifications ...
 
+function clean() {
+  return del(['/dist']);
+}
+
 function mini() {
-  return gulp
-    .src('project/*.html')
+  return  gulp.src('project/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
 }
 
-gulp.task('useref', mini);
+gulp.task('useref', gulp.series(clean, mini));
 gulp.task('watch', gulp.series(browser_sync, watch_files));
