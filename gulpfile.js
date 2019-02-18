@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const cssnano = require('cssnano');
+const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 const rename = require('gulp')
@@ -39,6 +39,8 @@ function clean() {
 function mini() {
   return  gulp.src('project/*.html')
     .pipe(useref())
+    .pipe(gulpIf('*.js', uglify()))
+    .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
 }
 
