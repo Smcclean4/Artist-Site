@@ -85,7 +85,22 @@ input, textarea {
   color:white;
 }
 .fa-instagram {
-  background: -webkit- linear-gradient(to bottom, #9900cc 0%, #ff9933 100%);
+  color:#9937a8;
+}
+.fa-twitter {
+  color:#5cc6db;
+}
+.fa-facebook-square {
+  color:#145ae5;
+}
+.fa-soundcloud {
+  color:#e85810;
+}
+.fa-spotify {
+  color:#2dbf43;
+}
+.fa-apple {
+  color:#d6d6d6;
 }
 
 
