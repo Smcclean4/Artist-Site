@@ -1,12 +1,14 @@
 /* header and navigation */
 body {
   background-color:whitesmoke;
+  height:auto;
 }
 .container {
   width:auto;
 }
 .nav {
   text-align:right;
+  height:50px;
 }
 ul {
   text-decoration:none;
@@ -28,3 +30,76 @@ a:hover {
   color:white;
   text-decoration: none;
 }
+/* Rotating Images */
+#banner {
+  background-color:maroon;
+  width:auto;
+  max-width:100%;
+  height:500px;
+}
+/* Music */
+#music {
+  text-align:center;
+  height:550px;
+  width:auto;
+  max-width:100%;
+}
+/* Booking Direct Email */
+#booking {
+  background-color:grey;
+  height:500px;
+  text-align:center;
+  width:auto;
+  max-width:100%;
+  padding-top:150px;
+}
+#connect {
+  margin-right:25%;
+}
+#connect, #input {
+  display:inline-block;
+  vertical-align:top;
+}
+.big-box {
+  height:200px;
+}
+input, textarea {
+  display:block;
+  margin:20px;
+  width:350px;
+}
+.text {
+  font-size:2.5em;
+}
+/* Social Media Links */
+#social {
+  width:auto;
+  max-width:100%;
+  height:500px;
+}
+.icons{
+  font-size:3.0em;
+  margin:2%;
+}
+.icons:hover {
+  color:white;
+}
+.fa-instagram {
+  background: -webkit- linear-gradient(to bottom, #9900cc 0%, #ff9933 100%);
+}
+
+
+/* Scrolling */
+
+/* parallax scrolling */
+/*.parralax {
+
+background-image:
+
+min-height:
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+} */
