@@ -75,7 +75,7 @@ input, textarea {
 #social {
   width:auto;
   max-width:100%;
-  height:500px;
+  height:250px;
 }
 .icons{
   font-size:3.0em;
@@ -101,6 +101,14 @@ input, textarea {
 }
 .fa-apple {
   color:#d6d6d6;
+}
+/* Footer */
+#footer {
+  background-color:maroon;
+  height:100px;
+  color:grey;
+  text-align:right;
+  padding:2%;
 }
 
 
