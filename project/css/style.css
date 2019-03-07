@@ -11,6 +11,7 @@ body {
   height:75px;
   padding-top:20px;
   background-color:whitesmoke;
+  opacity:0.9;
 }
 ul {
   text-decoration:none;
