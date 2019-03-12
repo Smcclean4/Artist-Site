@@ -1,4 +1,7 @@
 /* header and navigation */
+* {
+  font-family: 'Playfair Display SC', serif;
+}
 body {
   background-color:white;
   height:auto;
@@ -6,15 +9,18 @@ body {
 .container {
   width:auto;
 }
-.nav {
-  text-align:right;
-  height:75px;
-  width:100%;
-  max-width:auto;
-  padding-top:20px;
+#header {
   background-color:maroon;
+  text-align:right;
+  height:85px;
+  width:98.5%;
+  max-width:auto;
+  padding-top:30px;
   opacity:0.8;
   position:fixed;
+}
+.nav-text {
+  font-size:1.05em;
 }
 ul {
   text-decoration:none;
@@ -45,14 +51,14 @@ a:hover {
 #banner {
   width:auto;
   max-width:100%;
-  height:600px;
-  margin-top:80px;
+  height:900px;
+  margin-top:90px;
 }
 #banner-logo {
   text-align:center;
 }
 #image-buttons {
-  margin-top:220px;
+  margin-top:350px;
 }
 .button1 {
   float:left;
@@ -62,7 +68,7 @@ a:hover {
 }
 #image-dots {
   text-align:center;
-  margin-top:470px;
+  margin-top:700px;
 }
 /* Music */
 #music {
@@ -142,6 +148,7 @@ input, textarea {
   color:grey;
   text-align:right;
   padding:2%;
+  background-color:whitesmoke;
 }
 
 
