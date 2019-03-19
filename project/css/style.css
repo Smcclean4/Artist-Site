@@ -10,22 +10,21 @@ body {
   width:auto;
 }
 #header {
-  text-align:right;
+  text-align:center;
   height:85px;
   width:98.5%;
   max-width:auto;
   padding-top:30px;
-
   position:fixed;
+  background-color:rgba(107, 0, 2, 0.88);
 }
 .nav-text {
   font-size:1.05em;
 }
 ul {
   text-decoration:none;
-  word-spacing: 20px;
+  word-spacing: 40px;
   padding-right:10%;
-  background-color:maroon;
 }
 /* new nav colorway */
 #logo {
