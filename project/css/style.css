@@ -10,13 +10,12 @@ body {
   width:auto;
 }
 #header {
-  background-color:maroon;
   text-align:right;
   height:85px;
   width:98.5%;
   max-width:auto;
   padding-top:30px;
-  opacity:0.8;
+
   position:fixed;
 }
 .nav-text {
@@ -26,10 +25,16 @@ ul {
   text-decoration:none;
   word-spacing: 20px;
   padding-right:10%;
+  background-color:maroon;
 }
 /* new nav colorway */
 #logo {
   float:left;
+  margin-top:-40px;
+}
+.rfv-logo {
+  height:190px;
+  width:270px;
 }
 /* end */
 #logo, ul {
