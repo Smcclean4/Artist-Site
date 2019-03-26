@@ -23,7 +23,7 @@ body {
 }
 ul {
   text-decoration:none;
-  word-spacing: 40px;
+  word-spacing: 50px;/* 100px; */
   padding-right:10%;
 }
 /* new nav colorway */
@@ -60,19 +60,54 @@ a:hover {
 }
 #banner-logo {
   text-align:center;
+  height:250px;
+  margin-top:-100px;
+}
+#banner-logo-img {
+  height:250px;
+  width:490px;
 }
 #image-buttons {
-  margin-top:350px;
+  margin-top:130px;
 }
 .button1 {
   float:left;
+  height:200px;
+  width:200px;
 }
 .button2 {
   float:right;
+  height:200px;
+  width:200px;
+}
+.button1, .button2 {
+  opacity:0.5;
+}
+.button1:hover , .button2:hover {
+  opacity:1;
+  cursor:pointer;
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
 }
 #image-dots {
   text-align:center;
-  margin-top:700px;
+  margin-top:590px;
+}
+.active:hover, .dot:hover {
+  transform: scale(1.50);
+  -webkit-transform: scale(1.50);
+  -ms-transform: scale(1.50);
+  -moz-transform: scale(1.50);
+}
+.active {
+  height:130px;
+  width:130px;
+}
+.dot {
+  height:100px;
+  width:100px;
 }
 /* Music */
 #music {
